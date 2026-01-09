@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+header {
+    background: #1f7a4f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.imoveis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+
+.card img {
+    width: 100%;
+}
+
+.card a {
+    display: block;
+    background: #25d366;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.modal-content select,
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+.modal-content button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background: #1f7a4f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: rgba(255,255,255,0.8); /* branco transparente */
+    padding: 25px;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.options {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.options button,
+#btnProximo {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #1f7a4f;
+    color: white;
+    cursor: pointer;
+}
+
+.options button:hover {
+    background: #16603e;
+}
+
+#btnProximo:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+#campos-filtros input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+#campos-filtros select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+#filtros-ativos {
+    padding: 15px 30px;
+    background: #eef5f1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.filtro-tag {
+    background: #1f7a4f;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.filtro-tag span {
+    margin-left: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#alterar-filtros {
+    background: transparent;
+    border: 2px solid #1f7a4f;
+    color: #1f7a4f;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#ordenacao {
+    padding: 0 30px 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#ordenacao span {
+    font-weight: bold;
+}
+
+#ordenacao button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #1f7a4f;
+    background: white;
+    color: #1f7a4f;
+    cursor: pointer;
+}
+
+#ordenacao button:hover {
+    background: #1f7a4f;
+    color: white;
+}
+
+#limpar-tudo {
+    background: #b00020;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#limpar-tudo:hover {
+    background: #8c0019;
+}
+
+@media (max-width: 600px) {
+
+    .modal-content {
+        width: 95%;
+        max-width: none;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .options button,
+    #btnProximo,
+    .modal-content button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
